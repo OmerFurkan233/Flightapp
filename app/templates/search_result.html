@@ -8,7 +8,7 @@
 
 <p>You searched for: <strong>{{ query }}</strong></p>
 {% if flights %}
-    <p>Found {{ flights|length }} book{{ flights|pluralize }}.</p>
+    <p>Found {{ flights|length }} flight{{ flights|pluralize }}.</p>
     <ul>
         {% for flight in flights %}
             <li> {{ flight.deptAirport }}, {{ flight.arrAirport }}, {{ flight.duration }},

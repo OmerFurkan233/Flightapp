@@ -8,5 +8,3 @@ class FlightForm(forms.ModelForm):
   model = Flight
   fields = ['deptAirport','arrAirport','duration','airline','price','deptCity','arrCity','deptHour',
             'arrHour']
-
-#'departing_date',

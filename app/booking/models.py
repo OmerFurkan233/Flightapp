@@ -2,7 +2,6 @@ from django.db import models
 
 
 class Flight(models.Model):
-    #departing_date = models.CharField(max_length=11, null=True)
     deptAirport = models.CharField(max_length=100, null=True)
     arrAirport = models.CharField(max_length=100, null=True)
     duration = models.CharField(null=True, max_length=100)
@@ -17,4 +16,3 @@ class Flight(models.Model):
         return self.deptAirport+" "+self.arrAirport+" "+self.duration+" "\
                +self.airline+" "+self.price+" "+self.deptCity+" "+self.arrCity+" "+self.deptHour+" "\
                +self.arrHour
-    # self.departing_date+" "+ return sonrasına#
