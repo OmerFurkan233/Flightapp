@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+
+<p>You searched for: <strong>{{ query }}</strong></p>
+{% if flights %}
+    <p>Found {{ flights|length }} book{{ flights|pluralize }}.</p>
+    <ul>
+        {% for flight in flights %}
+            <li> {{ flight.deptAirport }}, {{ flight.arrAirport }}, {{ flight.duration }},
+        {{ flight.airline }}, {{ flight.price }}, {{ flight.deptCity }}, {{ flight.arrCity }}, {{ flight.deptHour }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No flights matched your search criteria.</p>
+{% endif %}
+
+</body>
+</html>

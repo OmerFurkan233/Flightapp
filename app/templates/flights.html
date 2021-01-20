@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>ALL FLIGHTS</title>
+{% endblock %}
+
+{% block content %}
+    <ol>
+    {% for flight in flights_list %}
+    <li> {{ flight.deptAirport }}, {{ flight.arrAirport }}, {{ flight.duration }},
+        {{ flight.airline }}, {{ flight.price }}, {{ flight.deptCity }}, {{ flight.arrCity }}, {{ flight.deptHour }}</li>
+    {% endfor %}
+    </ol>
+{% endblock %}

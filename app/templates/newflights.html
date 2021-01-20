@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/bdd89edb33.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet"  href="{%  static  'css/style.css'  %}">
+    <title>Search Results</title>
+  </head>
+  <body>
+    <section class="section-plans" id="section-plans">
+      <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">
+          Search Results
+        </h2>
+      </div>
+        {% for flight in flights_list %}
+
+      <div class="row">
+          <div class="card">
+            <div class="card__side card__side--front-1">
+              <div class="card__title card__title--1">
+                <i class="fas fa-paper-plane"></i>
+                <h4 class="card__heading">Basic</h4>
+              </div>
+
+              <div class="card__details">
+                <ul>
+                  <li>{{ flight.deptAirport }}</li>
+                  <li>{{ flight.arrAirport }}</li>
+                    <li>{{ flight.duration }}</li>
+                    <li>{{ flight.airline }}</li>
+                    <li>{{ flight.price }}</li>
+                     <li>{{ flight.deptCity }}</li>
+                      <li>{{ flight.arrCity }}</li>
+                      <li>{{ flight.deptHour }}, {{ flight.arrHour }}</li>
+                    </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-1">
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-value">Buy Your Ticket</p>
+                </div>
+                <a href="https://www.w3schools.com" class="btn btn--white">Buy Now!</a>
+              </div>
+            </div>
+        </div>
+{% endfor %}
+
+
+      </div>
+
+      <div class="u-center-text u-margin-top-huge">
+      </div>
+    </section>
+  </body>
+</html>
